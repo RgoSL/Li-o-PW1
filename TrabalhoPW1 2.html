@@ -1,0 +1,52 @@
+<html>
+<meta charset="UTF-8">
+<style>
+#div1, #div2 {
+  float: left;
+  width: 150px;
+  height: 100px;
+  margin: 2px 220px 30px 355px;
+  padding: 10px;
+  border: 1px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<body>
+<h1 style="background-color:rgb(255,0,0); font-family:algerian; text-align:center; color:white;"> Trabalho de PW1</h1>
+<h2 style="text-align:center"> Arraste de um lado para o outro! </h2>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://imgur.com/E2FydUr" alt="abra em uma nova guia se quiser ver!(ainda da pra arrastar mesmo sem carregar)" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="100">
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<h3 style="color:purple;"> Um elemento iframe que mostra um dos meus gostos!</h3> 
+<iframe width="1268" height="713" src="https://www.youtube.com/embed/uLFu-B175ng" title="😜 LUKE CAGE IS MUCH BETTER THAN YOU THINK!  How to beat Luke Cage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h4>  <a href="https://www.youtube.com/watch?v=IpjRuuFEPMk">Eu também gosto disso aqui! </a> </h4>
+
+<p style="text-align:center; font-size:50px";> cabou &#128525;&#128525;&#128525;&#128525; </p>
+
+
+<h2 style="text-align:center;"> Meu Diario de Bordo &#128512: </h2>
+<p> </p>
+<iframe src="file:///C:/Users/Rafael/projhtml/htmldodigo.html" style="border:none" height="200" width="1520"  title="Teste"></iframe>
+<p style="font-size:120%;color:mediumseagreen;"> O "Meu Diário de Bordo", é um registro das minhas tentativas enquanto aprendia sobre o html, pra conseguir visualizar o iframe dele, é preciso baixar o "htmldodigo" que enviei junto.<br>
+Pode ser que a resolução do site fique estranha, mas eu fiz pra ela se encaixar no meu monitor </p>
+<h5 style="text-align:right;"> Aperte Ctrl + A, ou selecione a última linha! </h5>
+<p style="color:white;"> Pensou que tinha acabado? Eu estou aqui escondido (vale um MB?) </p>
+</body>
+</html>
